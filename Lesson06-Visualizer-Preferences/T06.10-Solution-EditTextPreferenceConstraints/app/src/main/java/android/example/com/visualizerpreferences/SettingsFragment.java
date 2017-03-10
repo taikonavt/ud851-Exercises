@@ -25,6 +25,7 @@ import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceFragmentCompat;
 import android.support.v7.preference.PreferenceScreen;
+import android.util.Log;
 import android.widget.Toast;
 
 // COMPLETED (1) Implement OnPreferenceChangeListener
@@ -106,6 +107,7 @@ public class SettingsFragment extends PreferenceFragmentCompat implements
 
         // Double check that the preference is the size preference
         String sizeKey = getString(R.string.pref_size_key);
+        Log.d("MyLog", "pref= " + preference.getKey() + "; size= " + sizeKey);
         if (preference.getKey().equals(sizeKey)) {
             String stringSize = (String) newValue;
             try {

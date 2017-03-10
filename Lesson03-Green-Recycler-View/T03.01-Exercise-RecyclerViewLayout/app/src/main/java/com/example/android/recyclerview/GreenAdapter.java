@@ -130,6 +130,9 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
          * @param listIndex Position of the item in the list
          */
         void bind(int listIndex) {
+
+            listItemNumberView.setTextColor(ColorUtils
+                    .getViewHolderBackgroundColorFromInstance(,listIndex));
             listItemNumberView.setText(String.valueOf(listIndex));
         }
     }
